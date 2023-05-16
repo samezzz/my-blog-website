@@ -2,27 +2,29 @@ import Link from "next/link"
 import { FaYoutube, FaTwitter, FaGithub, FaLaptop } from "react-icons/fa"
 
 export default function Navbar() {
-  <nav>
-    <div>
-      <h1>
-        <Link>
-
-        </Link>
-      </h1>
+  return (
+    <nav>
       <div>
-        <Link>
-          <FaYoutube />
-        </Link>
-        <Link>
-          <FaLaptop />
-        </Link>
-        <Link>
-          <FaGithub />
-        </Link>
-        <Link>
-          <FaTwitter />
-        </Link>
+        <h1>
+          <Link href="/">
+
+          </Link>
+        </h1>
+        <div>
+          <Link href="/">
+            <FaYoutube />
+          </Link>
+          <Link href="/">
+            <FaLaptop />
+          </Link>
+          <Link href="/">
+            <FaGithub />
+          </Link>
+          <Link href="/">
+            <FaTwitter />
+          </Link>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  )
 }
