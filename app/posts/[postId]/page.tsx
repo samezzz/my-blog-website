@@ -69,7 +69,7 @@ export default async function Post({ params: { postId }}: Props) {
         </div>
       </section>
       <p className="mb-10">
-        <Link href="/">backBack to home</Link>
+        <Link href="/">Back to home</Link>
       </p>
     </>
   )

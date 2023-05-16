@@ -71,7 +71,7 @@ export async function getPostsMeta(): Promise<Meta[] | undefined> {
     }
   })
 
-  if (res.ok) return undefined
+  if (!res.ok) return undefined
 
   const repoFiletree: Filetree = await res.json()
 

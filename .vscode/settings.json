@@ -1,5 +1,8 @@
 {
   "cSpell.words": [
     "deduped"
+  ],
+  "cSpell.ignoreWords": [
+    "rehype"
   ]
 }
