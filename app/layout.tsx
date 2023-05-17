@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} font-inter dark:bg-[#0a0a0a] min-h-screen h-[500vh]`}>
+      <body className={`${inter.variable} font-inter dark:bg-[#0a0a0a] min-h-screen`}>
         <Navbar />
           <main className="px-4 md:px-6 prose prose-xl prose-slate dark:prose-invert mx-auto">
             {children}
