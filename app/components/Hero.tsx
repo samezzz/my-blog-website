@@ -1,20 +1,16 @@
-import Image from 'next/image'
+import { Manuale } from 'next/font/google';
+
+const manuale = Manuale({
+  subsets: ['latin'],
+  weight: '500',
+  variable: '--font-manuale',
+})
 
 export default function Hero() {
   return (
-    <section className="w-full mx-auto">
-      <Image
-        src="/people-03.png"
-        width={200}
-        height={200}
-        alt="Samuel Essilfie"
-        priority={true}
-      />
-      <p className="mt-12 mb-12 text-3xl text-center dark:text-white">
-        Hello and Welcome 👋🏽&nbsp;
-        <span className="whitespace-nowrap">I'm <span className="font-bold">Samuel</span>
-        </span>
-      </p>
+    <section className={`${manuale.variable} font-manuale w-full mx-auto`}>
+      <h1 className="mt-12 mb-12 text-5xl text-center dark:text-gray-100 font-bold leading-snug tracking-widest ">MINDSHARE <br /><span className="text-gradient-02">MEMOIRS</span>
+      </h1>
     </section>
   )
 }

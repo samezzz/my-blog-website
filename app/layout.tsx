@@ -1,13 +1,20 @@
 import './globals.css'
+import { Inter } from 'next/font/google';
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import { Metadata } from 'next'
 
 
 export const metadata: Metadata = {
-  title: "Samuel's Blog",
-  description: 'Created by Samess',
+  title: "Mindshare Memoirs",
+  description: 'Welcome to Mindshare Memoirs, where knowledge meets divine inspiration. It is a platform that offers a space to explore educational articles, study tips, and engage in thought-provoking discussions. Let us embark on a collective learning adventure together and expand our knowledge horizons. Discover a harmonious fusion of academic wisdom and spiritual revelation as we embark on a transformative quest for knowledge and divine enlightenment'
 }
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: '300',
+  variable: '--font-inter',
+})
 
 export default function RootLayout({
   children,
@@ -16,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="dark:bg-[#0a0a0a] min-h-screen">
+      <body className={`${inter.variable} font-inter dark:bg-[#0a0a0a] min-h-screen h-[500vh]`}>
         <Navbar />
           <main className="px-4 md:px-6 prose prose-xl prose-slate dark:prose-invert mx-auto">
             {children}
