@@ -16,7 +16,7 @@ export default function Footer() {
           <FaTwitter />
         </Link>
       </div>
-      <div className="mx-auto my-6 text-center ">Copyright &copy; 2023, MINDSHARE MEMOIRS INC.
+      <div className="mx-auto my-6 text-center text-gray-400 ">&copy; 2023 MINDSHARE MEMOIRS. All rights reserved.
       </div>
     </section>
   )
