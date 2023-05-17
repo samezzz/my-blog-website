@@ -9,7 +9,7 @@ export default async function Posts() {
   }
 
   return (
-    <section className="mt-6 mx-auto max-w-2xl">
+    <section className="container mx-auto flex flex-wrap md:gap-x-5 gap-y-5 px-5 py-10">
       <h2 className="text-4xl font-bold dark:text-white/90">
         Blog
       </h2>

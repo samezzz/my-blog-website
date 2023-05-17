@@ -1,17 +1,12 @@
 import Posts from './components/Posts'
-import MyProfilePic from './components/MyProfilePic'
+import Hero from './components/Hero'
 
 export const revalidate = 86400
 
 export default function Home() {
   return (
     <div className="mx-auto">
-      <MyProfilePic />
-      <p className="mt-12 mb-12 text-3xl text-center dark:text-white">
-        Hello and Welcome 👋🏽&nbsp;
-        <span className="whitespace-nowrap">I'm <span className="font-bold">Samuel</span>
-        </span>
-      </p>
+      <Hero />
       {/* @ts-expect-error Server Component */}
       <Posts />
     </div>
