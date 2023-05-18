@@ -8,7 +8,7 @@ const manuale = Manuale({
 
 export default function Hero() {
   return (
-    <section className={`${manuale.variable} font-manuale w-full mx-auto`}>
+    <section className={`${manuale.variable} font-manuale w-full max-w-screen mx-auto`}>
       <h1 className="mt-12 mb-12 text-4xl text-center dark:text-gray-100 font-bold leading-snug tracking-widest ">MINDSHARE <br /><span className="text-gradient-02">MEMOIRS</span>
       </h1>
     </section>
