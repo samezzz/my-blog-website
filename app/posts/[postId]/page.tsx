@@ -64,7 +64,7 @@ export default async function Post({ params: { postId }}: Props) {
       </article>
       <section className="mb-0">
         <h3>Related</h3>
-        <div className="flex flex-row gap-4 no-underline"> 
+        <div className="flex flex-row gap-4 no-underline hover:text-blue-500"> 
           {tags}
         </div>
       </section>
