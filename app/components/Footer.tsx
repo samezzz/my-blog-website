@@ -10,7 +10,7 @@ export default function Footer() {
           <FaLinkedinIn className="w-8 h-8 text-[#0072b1]" />
         </Link>
         <Link href="https://github.com/samezzz">
-          <FaGithub className="w-8 h-8" />
+          <FaGithub className="w-8 h-8 text-gray-900 dark:text-gray-100" />
         </Link>
         <Link href="https://twitter.com/_Samess">
           <FaTwitter className="w-8 h-8 text-[#1DA1F2]" />
