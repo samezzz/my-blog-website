@@ -53,13 +53,13 @@ export default async function Post({ params: { postId }}: Props) {
 
   return (
     <>
-      <h2 className="text-3xl mt-4 mb-0">
+      <h2 className="text-3xl mt-4 mb-0 text-gray-100">
         {meta.title}
       </h2>
       <p className="mt-0 text-sm">
         {pubDate}
       </p>
-      <article>
+      <article className="text-gray-800 dark:text-gray-200">
         {content}
       </article>
       <section className="mb-0">
