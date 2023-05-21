@@ -59,7 +59,7 @@ export default async function Post({ params: { postId }}: Props) {
       <p className="mt-0 text-sm">
         {pubDate}
       </p>
-      <article className="text-gray-800 dark:text-gray-200">
+      <article>
         {content}
       </article>
       <section className="mb-0">
