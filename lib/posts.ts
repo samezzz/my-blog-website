@@ -51,13 +51,16 @@ export async function getPostByName(fileName: string): Promise<BlogPost | undefi
     }
   })
 
-  const id = fileName.replace(/\.mdx$/, '')
+  const id = fileName.replace(/\.mdx$/, '');
+  const path = fileName.replace(/^.*\/(.*)\.mdx$/, '$1');
 
   const blogPostObj: BlogPost = {
     meta: {
-      id, title: frontmatter.title,
+      id,
+      title: frontmatter.title,
       date: frontmatter.date,
-      tags: frontmatter.tags
+      tags: frontmatter.tags,
+      path,
     }, content
   }
   return blogPostObj
