@@ -57,8 +57,7 @@ export async function getPostByName(fileName: string): Promise<BlogPost | undefi
     meta: {
       id, title: frontmatter.title,
       date: frontmatter.date,
-      tags: frontmatter.tags,
-      path: '',
+      tags: frontmatter.tags
     }, content
   }
   return blogPostObj
@@ -81,17 +80,12 @@ export async function getPostsMeta(): Promise<Meta[] | undefined> {
   const posts: Meta[] = []
 
   for (const file of filesArray) {
-    const fileName = file.split('/').pop(); // Extract the file name from the path
-
-    if (fileName) {
-      const post = await getPostByName(file)
-      if (post) {
-        const { meta } = post
-        meta.path = fileName.replace(/\.mdx$/, ''); // Update the path to remove the file extension
-        posts.push(meta);
-      }
+    const post = await getPostByName(file)
+    if (post) {
+      const { meta } = post
+      posts.push(meta)
     }
-
-    return posts.sort((a, b) => a.date < b.date ? 1 : -1)
   }
+
+  return posts.sort((a, b) => a.date < b.date ? 1 : -1)
 }
