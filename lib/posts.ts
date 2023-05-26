@@ -57,7 +57,8 @@ export async function getPostByName(fileName: string): Promise<BlogPost | undefi
     meta: {
       id, title: frontmatter.title,
       date: frontmatter.date,
-      tags: frontmatter.tags
+      tags: frontmatter.tags,
+      path: '',
     }, content
   }
   return blogPostObj
