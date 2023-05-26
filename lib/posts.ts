@@ -52,6 +52,7 @@ export async function getPostByName(fileName: string): Promise<BlogPost | undefi
   })
 
   const id = fileName.replace(/\.mdx$/, '');
+  const path = fileName.replace(/^.*\/(.*)\.mdx$/, '$1');
 
   const blogPostObj: BlogPost = {
     meta: {
@@ -59,6 +60,7 @@ export async function getPostByName(fileName: string): Promise<BlogPost | undefi
       title: frontmatter.title,
       date: frontmatter.date,
       tags: frontmatter.tags,
+      path,
     }, content
   }
   return blogPostObj
