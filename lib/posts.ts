@@ -52,7 +52,6 @@ export async function getPostByName(fileName: string): Promise<BlogPost | undefi
   })
 
   const id = fileName.replace(/\.mdx$/, '');
-  const path = fileName.replace(/^.*\/(.*)\.mdx$/, '$1');
 
   const blogPostObj: BlogPost = {
     meta: {
@@ -60,7 +59,6 @@ export async function getPostByName(fileName: string): Promise<BlogPost | undefi
       title: frontmatter.title,
       date: frontmatter.date,
       tags: frontmatter.tags,
-      path,
     }, content
   }
   return blogPostObj
@@ -86,9 +84,14 @@ export async function getPostsMeta(): Promise<Meta[] | undefined> {
     const post = await getPostByName(file)
     if (post) {
       const { meta } = post
-      posts.push(meta)
+      const fileName = file.split('/').pop(); // Extract the file name from the path
+      if (fileName) {
+        const urlPath = fileName.replace(/\.mdx$/, ''); // Remove the file extension
+        meta.path = urlPath; // Include only the file name as the URL path
+        posts.push(meta);
+      }
     }
-  }
 
-  return posts.sort((a, b) => a.date < b.date ? 1 : -1)
+    return posts.sort((a, b) => a.date < b.date ? 1 : -1)
+  }
 }
